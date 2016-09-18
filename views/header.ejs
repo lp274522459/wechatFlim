@@ -1,0 +1,30 @@
+<div class="header">
+<!--
+    <div class="logo"><a href="{dede:global.cfg_basehost/}">{dede:myppt typeid='2' row='1'}<img width="126" height="35" alt="logo" src="images/logo.png">{/dede:myppt}</a></div>
+-->
+<form id="ffsearch" name="ffsearch" method="post" action="/plus/search.php">
+
+<div class="searchFormCon globalPadding">
+<p class="pSearchForm">
+<input value="输入影片名进行搜索" onclick="if(this.value=='输入影片名进行搜索')this.value=''" autocomplete="off" name="q" class="searchTxt searchTxtBlur" type="text">
+<input class="searchBtn" type="submit">
+</p>
+</div>
+</form>
+</div>
+<header>
+<div class="nav-wrapper">
+<ul class="nav-sub N-s-arc equal-2">
+<% for(){} %>
+<li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+ 
+</ul>
+</div>
+</header>
+<div class="profile_info"> <span class="radius_avatar profile_avatar">{dede:myppt typeid='3' row='1'}<img src="[field:pic/]" width="20%">{/dede:myppt}</span> <strong class="profile_nickname">{dede:global.cfg_logo/}</strong>
+
+  <p class="profile_desc">{dede:global.cfg_logos/}</p>
+
+   <a id="weui_btn" href="{dede:global.cfg_weixin/}"><div class="profile_opr">进入公众号</div></a> 
+
+</div>

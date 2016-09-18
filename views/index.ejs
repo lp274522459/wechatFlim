@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/> 
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<title><%= webTitle %></title>
+<link href="/css/main.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">object,embed{                
+	-webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;                
+	-ms-animation-duration:.001s;-ms-animation-name:playerInserted;                
+	-o-animation-duration:.001s;-o-animation-name:playerInserted;                
+	animation-duration:.001s;animation-name:playerInserted;}               
+	@-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}               
+	@-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}               
+	@-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}               
+	@keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}
+</style>
+</head> 
+
+<body>
+
+<% include ./header.ejs %>
+
+<div id="content">
+    <div class="c-box" id="resize_list">
+        <div class="title"><h2>热门{dede:type typeid='1'}[field:typename/]{/dede:type}推荐：</h2></div>
+        <div class="plist">
+			<ul class="list_tab_img">
+				{dede:arclist row='21' addfields='leibie' typeid='1' channelid='17' flag='c'}
+				<li>
+					<a href="[field:arcurl/]">
+						<div class="picsize">
+							<img src="[field:litpic/]">
+							<label class="title">[field:leibie/]</label>
+							<label class="name">[field:title/]</label>
+						</div>
+					</a> 
+				</li>
+				{/dede:arclist}
+			</ul>
+		</div> 
+    </div>
+
+<div id="content">
+    <div class="c-box" id="resize_list">
+        <div class="title"><h2>热门{dede:type typeid='2'}[field:typename/]{/dede:type}推荐：</h2></div>
+        <div class="plist">
+			<ul class="list_tab_img">
+				{dede:arclist row='21' addfields='leibie' typeid='2' channelid='18'  flag='c'}
+				<li>
+					<a href="[field:arcurl/]">
+						<div class="picsize">
+							<img src="[field:litpic/]">
+							<label class="title">至[field:typeid function="GetTypeNum(@me)"/]集</label>
+							<label class="name">[field:title/]</label>
+						</div>
+					</a> 
+				</li>
+				{/dede:arclist}
+			</ul>
+		</div> 
+	</div>
+    
+    
+    <div id="content">
+    <div class="c-box" id="resize_list">
+        <div class="title"><h2>热门{dede:type typeid='3'}[field:typename/]{/dede:type}推荐：</h2></div>
+        <div class="plist">
+			<ul class="list_tab_img"> 
+				{dede:channel typeid='3' row='21'}
+				<li>
+					<a href="[field:typeurl/]">
+						<div class="picsize">
+							<img src="[field:typeimg/]">
+							<label class="title">[field:enname/]</label>
+							<label class="name">[field:typename/]</label>
+						</div>
+					</a> 
+				</li>
+				{/dede:channel}
+			</ul>
+		</div> 
+    </div>
+    
+    
+    <div id="content">
+    <div class="c-box" id="resize_list">
+        <div class="title"><h2>热门{dede:type typeid='4'}[field:typename/]{/dede:type}推荐：</h2></div>
+        <div class="plist">
+			<ul class="list_tab_img">
+				{dede:arclist row='21' addfields='leibie' typeid='4' channelid='19'  flag='c'}
+				<li>
+					<a href="[field:arcurl/]">
+						<div class="picsize">
+							<img src="[field:litpic/]">
+							<label class="title">至[field:typeid function="GetTypeNum(@me)"/]期</label>
+							<label class="name">[field:title/]</label>
+						</div>
+					</a> 
+				</li>
+				{/dede:arclist}
+			</ul>
+		</div> 
+    </div>
+
+
+	<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/images/zepto.js"></script>
+	<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/images/common.js"></script>
+
+
+
+<script type="text/javascript">  
+    if(top.location != self.location){  
+    top.location = self.location;//防止页面被框架包含  
+    }  
+</script>
+{dede:include filename="foot.htm"/}
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
